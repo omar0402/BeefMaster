@@ -1,0 +1,143 @@
+body{
+  margin: 0;
+  padding: 0;
+}
+
+.logo{
+  justify-content: center;
+  display: flex;
+}
+
+.main-nav{
+	align-items: center;
+	justify-content: center;
+	display:flex;
+	list-style: none;
+	font-size: 1.87em;
+	margin: 0;
+  background: #1E2122;
+}
+.main-nav>li{
+	color: #F18F0E;
+	padding: 15px 90px 15px 90px;
+}
+
+.main-nav a{
+	color: #F18F0E;
+  text-decoration: none;
+}
+
+.main-nav a:hover{
+	color: #A5D622;
+  text-decoration: underline;
+}
+
+.main-nav a:active{
+	color: #F9ED14;
+  text-decoration: underline;
+}
+
+.precios{
+  text-align: center;
+}
+
+.medianos{
+  text-align: center;
+  font-family: Calibri;
+}
+
+.anchos{
+  text-align: center;
+}
+
+.container{
+  background: #FFFFFF;
+  display: flex;
+  flex-wrap: wrap;
+  flex-flow: row;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.left-products{
+  width: 200px;
+  height: 130px;
+  padding-right: 15px;
+}
+
+.left-text-container{
+  margin-top: -20px;
+  padding-right: 15px;
+}
+
+.left-header{
+  font-family: Candara;
+}
+
+.left-description{
+  margin-top: -20px;
+}
+
+.left-price{
+  margin-top: -10px;
+  text-align: center;
+}
+
+.right-header{
+  font-family: Candara;
+}
+
+.right-products{
+  width: 200px;
+  height: 130px;
+  padding-left: 15px;
+}
+
+.right-text-container{
+  margin-top: -20px;
+  padding-left: 15px;
+}
+
+.right-description{
+  margin-top: -20px;
+}
+
+.right-price{
+  margin-top: -10px;
+  text-align: center;
+}
+
+.pie_pagina{
+  display: flex;
+  background: #1E2122;
+  height: 300px;
+}
+
+.redes{
+  font-family: Verdana;
+  font-size: 1.60em;
+  margin-top: 70px;
+  margin-left: 50px;
+  color: #ffffff;
+}
+
+.ig img{
+  margin-left: -350px;
+  margin-top: 130px;
+  border-radius: 18px;
+}
+
+.fb img{
+  margin-left: -100px;
+  height: 83px;
+  width: 83px;
+  margin-top: 130px;
+  border-radius: 18px;
+}
+
+.copyright{
+  color: #FFFFFF;
+  position: relative;
+  left: -300px;
+  margin-top: auto;
+}

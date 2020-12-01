@@ -1,0 +1,202 @@
+<!--  La declaración DOCTYPE no es una etiqueta, es un indicador que el
+navegador utilizará para saber qué versión de html se usará. Si no
+se especifica nada, el navegador lo tomará como html 5 la declaración
+no es "case sensitive", sin embargo he notado que la mayoría
+(si no es que todos) lo ponen en mayúsculas. -->
+<!-- La etiqueta html es la raíz del documento, contiene al resto de
+los elementos, a excepción de la declaración DOCTYPE. El atributo lang
+siempre debería estar dentro de la etiqueta html para que el navegador
+pueda reconocer el idioma del sitio web -->
+<!DOCTYPE html>
+<!-- Lang es un atributo para especificar el lenguaje del contenido,
+en este caso en en para "english". dir es un atributo que indicará
+la dirección de escritura, en este caso es ltr "left to right". Tanto
+dir como lang son atributos globales, o sea que puede ser aplicados en
+cualquier elemento. -->
+<html lang="en" dir="ltr">
+<!-- La etiqueta head es un contenedor de metadatos (datos con
+información de otros datos, dicho de otra manera, datos sobre datos).
+Se coloca entre la etiqueta de html y la de body. Aquí se definen cosas
+como el título, el conjunto de caracteres del documento, los estilos,
+los scripts, entre otras cosas. Es importante saber que la etiqueta
+"head" no es igual que la etiqueta "header" -->
+  <head>
+    <!-- La etiqueta meta sirve para definir metadatos de un documento
+    html. Por lo general, lo que contiene son los conjuntos de caracteres,
+    palabras clave, autor del documento, etc. Los meta datos no se muestran
+    en la página, pero son usados por el navegador para saber cómo
+    se mostrará la págna. En este caso el conjunto de caracteres que
+    se usará es el utf-8.   -->
+    <meta charset="utf-8"/>
+    <!-- La etiqueta de título contiene el nombre que se mostrará en la
+    pestaña del navegador. -->
+    <title>BeefMaster</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <!-- La etiqueta "link" permite definir el usó de un recurso
+    externo, es vacía, por lo cuál sólo contiene atributos. El atributo
+   "href" contendrá la ubicación (URL del archivo), el atributo "rel"
+    especificará el tipo de relación que se tendrá con esté recurso, que,
+    en este caso, será de estilo utilizando un archivo css.-->
+    <link rel="stylesheet" href="beef_style.css"/>
+  </head>
+  <!-- La etiqueta "body" va a contener todos los elementos del documento
+  html que se mostrarán en pantalla, tales como, párrafos,
+  imágenes, tablas, links, etc. Sólo puede haber una etiqueta "body"
+  por cada documento -->
+  <body>
+    <!-- La etiqueta "div" define una sección o división en
+    un documento de html, funcionando como un contenedor de elementos
+    que tendrán cierto estilo o que serán manipulados con algún script.
+    Se le puede dar estilo con atributo "class" o un atributo "id".
+    El atributo "class" sirve para definir un conjunto de elementos que
+    compartirán el mismo estilo, mientras que el atributo "id" es
+    un identificador único para un elemento y el estilo que tendrá,
+    por lo que no puede haber dos elemenos con el mismo "id". -->
+    <div class="logo">
+      <!-- La etiqueta "img" sirve para incrustar una imagen a una
+      página, o más bien para enlazar la imagen con la página. El
+      atributo "src" sirve para indicar la ubicación (Url) de la
+      imagen, y el atributo "alt" sirve para mostrar un texto
+      en caso de que la imagen no pueda ser mostrada. -->
+      <img src="./imagenes/beef_logo.jpg" alt="logo">
+    </div>
+
+    <div class="center">
+      <!--La etiqueta ul significa unordered list-->
+      <ul class="main-nav">
+        <!--La etiqueta li significa list item-->
+        <li><a href="#historia">Historia</a></li>
+        <li><a href="products.html">Menú</a></li>
+        <li><a href="#pagos">Pagos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </div>
+
+    <div class="miniborder">
+      <p>Calidad premium en todos nuestros productos</p>
+    </div>
+
+
+    <!-- <div class="menu">
+      <p><strong><a name=menu>Menú</a></strong></p>
+    </div> -->
+
+    <div class="slider_box">
+      <div class="slider">
+        <div class="slides">
+          <!-- La etiqueta "input" permite definir un elemento que permitirá
+          al usuario introducir información que se puede procesar.
+          Pueden ser botones, cuadros de texto, cajas, etc. El atributo
+          "type" definirá que tipo de entrada será, y el atributo "name"
+          sirve para darle un nombre al elemento para que pueda ser
+          manipulado desde un JavaScript-->
+          <input type="radio" name="radio-btn" id="radio1">
+          <input type="radio" name="radio-btn" id="radio2">
+          <input type="radio" name="radio-btn" id="radio3">
+          <input type="radio" name="radio-btn" id="radio4">
+
+          <div class="slide first">
+            <img src="./imagenes/carrusel/picanat.jpg" alt="picana"/>
+            <div class="slide-text">
+              <h5>Picana</h5>
+              <p>Carne</p>
+            </div>
+          </div>
+
+          <div class="slide">
+            <img src="./imagenes/carrusel/ribeyet.jpg" alt=""/>
+            <div class="slide-text">
+              <h5>Ribeye</h5>
+              <p>Carne rib</p>
+            </div>
+          </div>
+
+          <div class="slide">
+            <img src="./imagenes/carrusel/primeribt.jpg" alt=""/>
+            <div class="slide-text">
+              <h5>Prime rebeye</h5>
+              <p>Rib prime</p>
+            </div>
+          </div>
+
+          <div class="slide">
+            <img src="./imagenes/carrusel/cowboyt.jpg" alt=""/>
+            <div class="slide-text">
+              <h5>Cowboy</h5>
+              <p>Corte cowboy</p>
+            </div>
+          </div>
+
+          <div class="navigation-auto">
+            <div class="auto-btn1"></div>
+            <div class="auto-btn2"></div>
+            <div class="auto-btn3"></div>
+            <div class="auto-btn4"></div>
+          </div>
+
+        </div>
+
+        <div class="navigation-manual">
+          <!-- "label" permite definir etiquetas para varios elementos,
+          el atributo "for" sirve para definir a qué "id" de elemento
+          está unida la etiqueta. -->
+          <label for="radio1" class="manual-btn"></label>
+          <label for="radio2" class="manual-btn"></label>
+          <label for="radio3" class="manual-btn"></label>
+          <label for="radio4" class="manual-btn"></label>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="border">
+    </div>
+
+    <div class="historia">
+      <p id="historia-p"><strong><a style="color: #000000;" name=historia>Historia</a></strong></p>
+      <p id="relato-p">BeefMaster surge con la intención de dar a conocer la <br> excelente calidad y el exquisito sabor que pueden llegar a tener cortes<br> de carne de origen 100% mexicano.<br>  </p>
+    </div>
+
+    <div class="border">
+    </div>
+
+    <div class="pagos">
+      <p id="pagos-titulo"><strong><a style="color: #000000;" name=pagos>Formas de pago</a></strong></p>
+      <p id="formas-pago">En BeefMaster nos interesa la comodidad <br> de nuestros clientes, así que ofrecemos <br> las opciones de pagar en efectivo <br> y con transferencia bancaria. </p>
+    </div>
+
+    <div class="border">
+    </div>
+
+    <div class="contacto">
+      <p id="contacto-titulo"><strong><a style="color: #000000;" name=contacto>Contacto</a></strong></p>
+      <p id="contacto-telefono">Pedidos por WhatsApp: 55 3656 7551</p>
+      <div class="WAlogo">
+        <a href="https://wa.me/message/B7XHJMWFQCEQC1"target="_blank"><img src="./imagenes/wa_ic.jpg" alt="WA"></a>
+      </div>
+      <p id="contacto-entrega"> ¿No quieres salir de tu casa pero quieres deleitar tu paladar <br>con los mejores sabores? No te preocupes, hacemos entrega<br> a domicilio con costo extra - Dostavista - Partiendo del centro de Coyoacán</p>
+      <div class="entrega-domicilio">
+        <img src="./imagenes/entrega.jpg" alt="entrega"/>
+      </div>
+    </div>
+
+    <div class="pie_pagina">
+      <p class="redes">Siguenos en nuestras redes sociales:</p>
+      <a class="ig" href="https://www.instagram.com/testbuss56/" target="_blank"><img src="./imagenes/ig_ic.jpg" alt="ig"></a>
+      <a class="fb" href="https://www.facebook.com/TestCarnes-112251687271584/" target="_blank"><img src="./imagenes/fb_ic.jpg" alt="fb"></a>
+      <p class="copyright">© 2020, BeefMaster.</p>
+    </div>
+
+    <script type="text/javascript">
+      var counter =1;
+      setInterval(function(){
+        document.getElementById('radio' + counter).checked = true;
+        counter++;
+        if(counter>4){
+          counter = 1;
+        }
+      }, 3000);
+    </script>
+
+  </body>
+</html>
