@@ -12,7 +12,7 @@
 }
 
 body {
-    background-image: url("../images/backgrounds/field-sunset.jpg");
+    background-image: url("../images/backgrounds/farm-sunset.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -35,14 +35,6 @@ body {
     border-radius: 18px;
 }
 
-#footer-social {
-    font-family: Verdana;
-    font-size: 30px;
-    padding-top: 20px;
-    margin-left: 50px;
-    color: #ffffff;
-}
-
 #ig-ic img {
     border-radius: 18px;
 }
@@ -54,13 +46,12 @@ body {
     display: none;
     width: 40px;
     float: right;
-    color: rgb(255, 255, 255);
+    color: rgb(255, 0, 0);
 }
 
 #toogle {
     display: none;
 }
-
 
 /*-- INIT Classes --*/
 
@@ -76,8 +67,20 @@ body {
 
 .footer {
     display: flex;
-    flex-direction: column;
+    flex-flow: row wrap;
     background-color:  #1E2122;
+}
+
+.footer > * {
+    flex: 1 100%;
+}
+
+.footer-title {
+    font-family: Verdana;
+    font-size: 30px;
+    padding-top: 20px;
+    margin-left: 50px;
+    color: #ffffff;
 }
 
 .footer-icons {
@@ -86,9 +89,60 @@ body {
     margin-top: 20px;
 }
 
+.item {
+    margin: 0 auto;
+    position: relative;
+    top: 30px;
+}
+
+.item a {
+    text-decoration: none;
+    color: #000;
+}
+
+.item img {
+    width: 260px;
+    height: 260px;
+}
+
+.item-overlay {
+    background-color: rgba(253, 253, 253, 0.80);
+    text-align: center;
+    line-height: 2;
+    position: relative;
+    top: -150px;
+}
+
+.item-overlay:hover {
+    opacity: 0.75;
+    transition: 0.3s ease-in-out;
+}
+
+.item-price {
+    color: #7e7c82;
+}
+
+.item-separator {
+    margin: 0 auto;
+    width: 50px;
+    height: 2px;
+    background-color: #1707ff;
+}
+
+.item-title {
+    font-style: italic;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
 .navbar {
     border-bottom: 1px solid #EAEAEB;
-    background-color: rgb(0, 0, 0);
+    background-image: url("../images/backgrounds/blue-sunset.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    background-attachment: fixed;
     font-family: 'Caudex';
     font-size: 26px;
     height: 70px;
@@ -98,7 +152,11 @@ body {
 }
 
 .navbar:hover {
-    background-color:rgba(43, 114, 173, 0.753);
+    background-image: url("../images/backgrounds/wood-plant.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
 }
 
 .navbar-options {
@@ -108,82 +166,27 @@ body {
 .navbar-options a{
     clear: right;
     text-decoration: none;
-    color: aquamarine;
+    color:cyan;
     margin: 0 10px;
     line-height: 70px;
 }
 
-.navbar-options a:hover{
-    color: crimson;
+.navbar-options a:hover {
+    color: rgb(0, 0, 0);
+    font-weight: bold;
 }
 
-.paragraphs {
+.products-cards {
+    background-color: rgba(0, 0, 0, 0.466);
     display: flex;
-    justify-content: center;
-}
-
-.paragraphs-container {
-    display: flex;
-    justify-content: center;
-    font-family: 'Caudex';
-    font-size: 15px;
-    color: azure;
-    background-color: rgba(0, 0, 0, 0.466); 
-    width: 85%;
-    font-style: italic;
-    text-align: center;
-}
-
-.paragraphs-container-left {
-    display: flex;
-    flex-direction: column;
-    width: 65%;
-    text-align: center;
     justify-content: space-around;
-}
-
-.paragraphs-container-left p{
-    margin-bottom: 50px;
-}
-
-.paragraphs-container-right {
-    display: flex;
-    flex-direction: column;
-    width: 65%;
-    text-align: center;
-    justify-content: space-around;
-    padding-top: -50px;
-}
-
-.paragraphs-container-right p {
-    margin-bottom: 50px;
-}
-
-.products {
-    display: flex;
-    justify-content: center;
-}
-
-.products img {
-    width: 200px;
-    height: 130px;
+    flex-wrap: wrap;
+    margin: 0 25px;
 }
 
 .products-container {
-    display: flex;
-    justify-content: center;
-}
-
-.products-container-left {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.products-container-right {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    width: 88.3%; 
+    margin: 0px auto;
 }
 
 .subtitles{
@@ -207,7 +210,7 @@ body {
 
 @media only screen and (max-width: 500px) {
 
-    #footer-social {
+    .footer-title {
         font-size: 25px;
     }
 
@@ -228,13 +231,19 @@ body {
         top: 270px;
         z-index: 1;
         display: none; 
-        background-color:rgba(43, 114, 173, 0.753);
+        background-image: url("../images/backgrounds/wood-plant.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        background-attachment: fixed;
     }
 
     .navbar-options a{
         display: block;
         border-bottom: 1px solid #EAEAEB;
         margin: 0;
+        color: rgb(0, 0, 0);
+        font-weight: bold;
     }
     
     #toogle:checked + .navbar-options {

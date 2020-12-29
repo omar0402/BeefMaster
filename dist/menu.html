@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
     <link rel="stylesheet" type="text/css" href="./static/styles/menu.css"/>
     <link rel="shortcut icon" href="./static/images/icons/beef_icon.jpg"/>
     <title>BeefMaster Menú</title>
@@ -23,28 +23,72 @@
     </div>
 
     <div class="subtitles">
-        <h1>Exquisitos cortes de la más alta calidad.</h1>
-        <h2>Los precios mostrados a continuación son por kilo.</h2>
-        <h3>Cortes medianos:</h3>
+        <div class="subtitles-container">
+            <h1>Exquisitos cortes de la más alta calidad.</h1>
+            <h2>Los precios mostrados a continuación son por kilo.</h2>
+            <h3>Cortes medianos:</h3>
+        </div>
     </div>
 
-    <div class="products">
+    <div class="paragraphs">
 
-        <img src="./static/images/meat/picana.jpg" alt="Picanha image">
+        <div class="paragraphs-container">
+            <div class="products">
+                <div class="products-container">
+                    <div class="products-container-left">
+                        <img src="./static/images/meat/picana.jpg" alt="Picanha image">
+                        <img src="./static/images/meat/primerib.jpg" alt="Prime rib image">
+                    </div>
+                </div>
+            </div>
+            <div class="paragraphs-container-left">
+                <h2>Ribeye</h2>
+                <p>Corte jugoso y recubierto por una capa de grasa externa.
+                    Se puede preparar en una diversa cantidad de platillos.</p>
+                <p>$350</p>
 
+                <p>Su marmoleado se encuentra mejor distribuido, 
+                    por lo que su sabor se percibe mejor.</p>
+            </div>
+
+            <div class="products">
+                <div class="products-container">
+                    <div class="products-container-right">
+                        <img src="./static/images/meat/ribeye.jpg" alt="Ribeye image">
+                        <img src="./static/images/meat/cowboy.jpg" alt="Cowboy image">
+                    </div>
+                </div>
+            </div>
+
+            <div class="paragraphs-container-right">
+                <h2>Ribeye</h2>
+                <p>Corte suave y marmoleado. Ideal para preparse 
+                    sellado, a la parilla o frito.</p>
+                <p>$350</p>
+
+                <p>El hueso que trae este corte hace que 
+                    el sabor sea exquisito. Ideal para asarse.</p>
+            </div>
+
+        </div>
     </div>
 
-    <div class="products">
-        <img src="./static/images/meat/ribeye.jpg" alt="Ribeye image">
-    </div>
+    <!--    <div style="display: flex; justify-content: center;">
+        <div style="width: 85%; display: flex; justify-content: center; text-align: center; color: cornsilk; font-size: 50px; background-color: rgba(202, 72, 72, 0.863); ">
+            <p>ppppppppppppppppppppppppppppppppppppppppp
+                pppppppppppppppppppppppppppppppppppppppppppp
+                pppppppppppppppppppppppppppppppppp. ppppppppppppppppppp</p>
+        </div>
+        
+    </div>-->
 
     <div class="footer">
         <p id="footer-social">Siguenos en nuestras redes sociales:</p>
         <div class="footer-icons">
             <a id="ig-ic" href="https://www.instagram.com/testbuss56/" target="_blank"><img src="./static/images/icons/ig_ic.jpg" alt="Instagram icon"></a>
-            <a id="fb-ic" href="https://www.facebook.com/TestCarnes-112251687271584/" target="_blank"><img src="./static/images/icons/fb_ic.jpg" alt="Facebook icon"></a>
+            <a id="fb-ic" href="https://www.facebook.com/Beefmaster-112251687271584/" target="_blank"><img src="./static/images/icons/fb_ic.jpg" alt="Facebook icon"></a>
         </div>
-        <p id="copyright">© 2020, BeefMaster.</p>
+        <p id="copyright">© 2021, BeefMaster.</p>
     </div>
     
 </body>
